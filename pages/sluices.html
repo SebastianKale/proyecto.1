@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <title>WikiBlox! - Sluices</title>
+</head>
+<body>
+    <header class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img class="logo" src="../img/prospecting.webp" alt="imagen de logo">
+                    </a>
+                    <a class="navbar-brand" href="../index.html">WikiBlox!</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navegar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/pans.html">Pans</a></li>
+                                    <li><a class="dropdown-item" href="../pages/shovels.html">Shovels</a></li>
+                                    <li><a class="dropdown-item" href="../pages/minerals.html">Minerals</a></li>
+                                    <li><a class="dropdown-item" href="../pages/sluices.html">Sluices</a></li>
+                                    <li><a class="dropdown-item" href="../pages/equipment.html">Equipment</a></li>
+                                    <li><a class="dropdown-item" href="#">Enchanting</a></li>
+                                    <li><a class="dropdown-item" href="#">Locations</a></li>
+                                    <li><a class="dropdown-item" href="#">Traveling Merchant</a></li>
+                                    <li><a class="dropdown-item" href="#">Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Quests</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-box">
+            <h1>Sluices</h1>
+            <p class="subtitle">From Nikkis</p>
+            <p class="text-content"><strong>Las compuertas</strong> son un elemento de recolección de minerales que se puede obtener en <em>Prospecting</em>.</p>
+            <p class="text-content">Al colocar una <strong>compuerta</strong> en un río se mostrará un temporizador encima de ella que detallará cuándo se llenará hasta alcanzar 1 de su capacidad.</p>
+            <p class="text-content">Si se excede la capacidad, la <strong>compuerta</strong> dejará de recolectar más <a href="../pages/minerals.html">minerales</a>.</p>
+            <p class="text-content"><strong>Las compuertas</strong> continuarán acumulándose fuera de línea.</p>
+
+            <div class="toggle-header" onclick="toggleTabList()"><h2><span id="arrow" class="arrow">▲</span> Lista de sluices</h2>
+            </div>
+            <div id="tabList" class="table-container">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Apariencia</th>
+                            <th class="ocultar">Nombre/Descripción</th>
+                            <th>Precio</th>
+                            <th class="ocultar1">Estadísticas</th>
+                            <th>Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img class="img3" src="../img/WoodSluice.webp" alt="Wood Sluice Box"></td>
+                            <td class="ocultar"><strong>Caja de compuerta de madera</strong><br><span>Una caja que filtra automáticamente los objetos de valor del agua corriente, incluso cuando no está en línea!</span></td>
+                            <td style="color: #FFD700;"><strong>$5,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 80 </span><br>
+                                <span><strong>Capacidad:</strong> 30 </span><br>
+                                <span><strong>Eficiencia:</strong> 1 </span><br>
+                                <span><strong>Dureza:</strong> 1 </span><br>
+                            </td>
+                            <td style="color: #DBBD74;">Rubble Creek</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/SteelSluice.webp" alt="Steel Sluice Box"></td>
+                            <td class="ocultar"><strong>Caja de compuerta de acero</strong><br><span>Una caja de compuerta estándar utilizada por los buscadores de oro para filtrarlo. ¡Recopila sin conexión!</span></td>
+                            <td style="color: #FFD700;"><strong>$100,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 200 </span><br>
+                                <span><strong>Capacidad:</strong> 60 </span><br>
+                                <span><strong>Eficiencia:</strong> 1,5 </span><br>
+                                <span><strong>Dureza:</strong> 2 </span><br>
+                            </td>
+                            <td style="color: #DBBD74;">Rubble Creek</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/GoldSluice.webp" alt="Gold Sluice Box"></td>
+                            <td class="ocultar"><strong>Caja de compuerta de oro</strong><br><span>Una compuerta de alta calidad recubierta de oro, que la protege de la corrosión.</span></td>
+                            <td style="color: #FFD700;"><strong>$655,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 400 </span><br>
+                                <span><strong>Capacidad:</strong> 75 </span><br>
+                                <span><strong>Eficiencia:</strong> 2 </span><br>
+                                <span><strong>Dureza:</strong> 3 </span><br>
+                            </td>
+                            <td style="color: #DBBD74;">Rubble Creek</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/ObsidianSluice.webp" alt="Obsidian Sluice Box"></td>
+                            <td class="ocultar"><strong>Caja de compuerta de obsidiana</strong><br><span>Una elegante compuerta de obsidiana que corta el agua, lo que le permite tamizar objetos de valor con facilidad.</span></td>
+                            <td style="color: #FFD700;"><strong>$4,000,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 1.000 </span><br>
+                                <span><strong>Capacidad:</strong> 100 </span><br>
+                                <span><strong>Eficiencia:</strong> 2 </span><br>
+                                <span><strong>Dureza:</strong> 4 </span><br>
+                            </td>
+                            <td style="color: #603ebd9f;">Shady Merchant</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/EnchantedSluice.webp" alt="Enchanted Sluice"></td>
+                            <td class="ocultar"><strong>Esclusa encantada</strong><br><span>Una compuerta encantada con una variedad de hechizos poderosos, que aumentan su suerte y eficiencia a costa de la capacidad.</span></td>
+                            <td style="color: #FFD700;"><strong>$12,000,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 2.500 </span><br>
+                                <span><strong>Capacidad:</strong> 75 </span><br>
+                                <span><strong>Eficiencia:</strong> 3 </span><br>
+                                <span><strong>Dureza:</strong> 4 </span><br>
+                            </td>
+                            <td style="color: #603ebd9f;">Shady Merchant</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/DragonflameSluice.webp" alt="Dragonflame Sluice"></td>
+                            <td class="ocultar"><strong>Esclusa de Llama de Dragón</strong><br><span>Una compuerta dracónica que convierte el mineral en combustible, dejando solo lo más valioso atrás.</span></td>
+                            <td style="color: #FFD700;"><strong>$200,000,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 5.000 </span><br>
+                                <span><strong>Capacidad:</strong> 125 </span><br>
+                                <span><strong>Eficiencia:</strong> 2 </span><br>
+                                <span><strong>Dureza:</strong> 5 </span><br>
+                            </td>
+                            <td style="color: #BB0A00;">The Magma Furnace</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/FossilizedSluice.png" alt="Fossilized Sluice"></td>
+                            <td class="ocultar"><strong>Compuerta Fosilizada</strong><br><span>Una antigua compuerta fosilizada por el paso del tiempo. Increíblemente lenta, pero con un gran rendimiento una vez llena.</span></td>
+                            <td style="color: #FFD700;"><strong>$800,000,000</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 25.000 </span><br>
+                                <span><strong>Capacidad:</strong> 200 </span><br>
+                                <span><strong>Eficiencia:</strong> 1 </span><br>
+                                <span><strong>Dureza:</strong> 6 </span><br>
+                            </td>
+                            <td style="color: #E71D05;">Ancient Ruins</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img3" src="../img/Arctic_Sluice.png" alt="Artic Sluice"></td>
+                            <td class="ocultar"><strong>Esclusa Ártica</strong><br><span>Una esclusa helada y rápida diseñada para aguas frías del Ártico.</span></td>
+                            <td style="color: #FFD700;"><strong>$10 Billones</td>
+                            <td class="ocultar1">
+                                <span><strong>Suerte:</strong> 20.000 </span><br>
+                                <span><strong>Capacidad:</strong> 200 </span><br>
+                                <span><strong>Eficiencia:</strong> 4 </span><br>
+                                <span><strong>Dureza:</strong> 6 </span><br>
+                            </td>
+                            <td style="color: #5D37F6;">Frozen Peak</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+
+    <footer>
+        <p>© 2025 Wiki Prospecting Roblox. Página hecha por fans. No afiliado con Roblox Corporation.</p>
+    </footer>
+</body>
+</html>

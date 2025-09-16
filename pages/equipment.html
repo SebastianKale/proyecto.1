@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>WikiBlox! - Equipment</title>
+</head>
+<body>
+    <header class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img class="logo" src="../img/prospecting.webp" alt="imagen de logo">
+                    </a>
+                    <a class="navbar-brand" href="../index.html">WikiBlox!</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navegar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/pans.html">Pans</a></li>
+                                    <li><a class="dropdown-item" href="../pages/shovels.html">Shovels</a></li>
+                                    <li><a class="dropdown-item" href="../pages/minerals.html">Minerals</a></li>
+                                    <li><a class="dropdown-item" href="../pages/sluices.html">Sluices</a></li>
+                                    <li><a class="dropdown-item" href="../pages/equipment.html">Equipment</a></li>
+                                    <li><a class="dropdown-item" href="#">Enchanting</a></li>
+                                    <li><a class="dropdown-item" href="#">Locations</a></li>
+                                    <li><a class="dropdown-item" href="#">Traveling Merchant</a></li>
+                                    <li><a class="dropdown-item" href="#">Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Quests</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-box">
+            <h1>Equipment</h1>
+            <p class="subtitle">From Nikkis</p>
+            <p class="text-content"><strong>El equipo</strong> otorga bonificaciones pasivas mientras juegas. Equipa objetos en una de las tres ranuras: <em>Anillo</em>, <em>Collar</em> o <em>Amuleto</em>.</p>
+            <p class="text-content">Para fabricar equipo, interactúa con el <strong>Yunque en el taller</strong>, ubicado en el punto de aparición o en el pueblo del Río Fortuna. Necesitarás <a href="../pages/minerals.html">minerales</a> especifícos para cada receta.</p>
+
+            <div class="toggle-header" onclick="toggleTabList()">
+                <h2><span id="arrow" class="arrow">▲</span> Lista de equipos</h2>
+            </div>
+            <div id="tabList">
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('comun')">Común</div>
+                    <div class="tab" onclick="showTab('poco-comun')">Poco común</div>
+                    <div class="tab" onclick="showTab('raro')">Raro</div>
+                    <div class="tab" onclick="showTab('epico')">Épico</div>
+                    <div class="tab" onclick="showTab('legendario')">Legendario</div>
+                    <div class="tab" onclick="showTab('mitico')">Mítico</div>
+                    <div class="tab" onclick="showTab('exotico')">Exótico</div>
+                </div>
+                <div id="comun" class="tab-content active">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Gold_Ring.png" alt="Gold Ring"></td>
+                                <td class="ocultar"><i>Anillo de oro</i><br><small>Un anillo de oro brillante</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>5 de oro</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (0.2 - 0.7)</span><br>
+                                </td>
+                                <td style="color: gold;"><strong>$2,000</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Amethyst_Pendant.png" alt="Amethyst Pendant"></td>
+                                <td class="ocultar"><i>Colgante de amatista</i><br><small>Un collar de amatista elaborado en platino.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>8 Platino</span><br>
+                                    <span>2 Amatista</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (0.5 - 2)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (0 - 15%)</span><br>
+                                </td>
+                                <td style="color: gold;"><strong>$10,000</strong></td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Garden_Glove.webp" alt="Garden Glove"></td>
+                                <td class="ocultar"><i>Guante de jardinería</i><br><small>Un guante resistente que protege las manos.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Titanio</span><br>
+                                    <span>5 Oro</span><br>
+                                    <span>5 Pirita</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Fuerza de excavación:</strong> (0.2 - 1)</span><br>
+                                    <span><strong>Capacidad:</strong> (0 - 5)</span><br>
+                                </td>
+                                <td style="color: gold;">$10,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Titanium_Ring.png" alt="Titanium Ring"></td>
+                                <td class="ocultar"><i>Anillo de titanio</i><br><small>Un anillo de titanio resistente.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>5 Titanio</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Capacidad:</strong> (1 - 13)</span><br>
+                                </td>
+                                <td style="color: gold;">$20,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="poco-comun" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Smoke_Ring.png" alt="Smoke Ring"></td>
+                                <td class="ocultar"><i>Anillo de Humo</i><br><small>Un anillo elaborado con cuarzo ahumado. Su efecto de ocultación resalta las propiedades ocultas de las gemas.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>4 Cuarzo ahumado</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Refuerzo de modificador:</strong> (5 - 15%)</span><br>
+                                </td>
+                                <td style="color: gold;">$20,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Pearl_Necklace.png" alt="Pearl Necklace"></td>
+                                <td class="ocultar"><i>Collar de perlas</i><br><small>Un collar de perlas.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>8 Perlas (+0,1kg)</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (1 - 4)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (0 - 4)</span><br>
+                                </td>
+                                <td style="color: gold;">$22,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Jade_Armband.webp" alt="Jade Armband"></td>
+                                <td class="ocultar"><i>Brazalete de jade</i><br><small>Un brazalete de jade sencillo.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>4 Jade</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (1 - 8)</span><br>
+                                    <span><strong>Capacidad:</strong> (1 - 10)</span><br>
+                                </td>
+                                <td style="color: gold;">$50,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Topaz_Necklace.webp" alt="Topaz Necklace"></td>
+                                <td class="ocultar"><i>Collar de topacio</i><br><small>Un collar sencillo con una gran gema de topacio.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>3 Titanio</span><br>
+                                    <span>1 Topacio</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (1 - 5)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (1 - 4) </span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (0.2 - 1)</span><br>
+                                </td>
+                                <td style="color: gold;">$60,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="raro" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Ruby_Ring.webp" alt="Ruby Ring"></td>
+                                <td class="ocultar"><i>Anillo de rubí</i><br><small>Un anillo de platino con una piedra preciosa rubí incrustada.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>5 Platino (+0,25kg)</span><br>
+                                    <span>1 Rubí</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (1 - 3)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (0- 18%)</span><br>
+                                </td>
+                                <td style="color: gold;">$45,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Lapis_Armband.webp" alt="Lapis Armband"></td>
+                                <td class="ocultar"><i>Brazalete de lapislázuli</i><br><small>Un brazalete encantado tallado en lapislázuli.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>2 lapislázuli</span><br>
+                                    <span>4 Oro (+0.5kg)</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (2 - 9)</span><br>
+                                    <span><strong>Velocidad de excavación:</strong> (0 - 40%)</span><br>
+                                    <span><strong>Velocidad de sacudida:</strong> (0 - 40%)</span><br>
+                                </td>
+                                <td style="color: gold;">$111,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Speed_Coil.png" alt="Speed Coil"></td>
+                                <td class="ocultar"><i>Speed Coil</i><br><small>Una bobina que mejora la velocidad y la eficiencia del usuario.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Hierro meteórico</span><br>
+                                    <span>3 Neodimio</span><br>
+                                    <span>5 Titanio</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Velocidad de excavación:</strong> (0 - 70%)</span><br>
+                                    <span><strong>Velocidad de agitación:</strong> (0 - 70%)</span><br>
+                                </td>
+                                <td style="color: gold;">$120,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Meteor_Ring.webp" alt="Meteor Ring"></td>
+                                <td class="ocultar"><i>Anillo de meteorito</i><br><small>Un anillo hecho de hierro meteórico.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>3 Hierro meteórico</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Fuerza de excavación:</strong> (0.5 - 3)</span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (0 - 1)</span><br>
+                                </td>
+                                <td style="color: gold;">$150,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="epico" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Opal_Amulet.png" alt="Opal Amulet"></td>
+                                <td class="ocultar"><i>Amuleto de ópalo</i><br><small>Un amuleto de ópalo.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Ópalo</span><br>
+                                    <span>1 Jade (+0,3kg)</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (2 - 13)</span><br>
+                                    <span><strong>Modificador de aumento:</strong> (0 - 90%)</span><br>
+                                </td>
+                                <td style="color: gold;">$400,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Moon_Ring.webp" alt="Moon Ring"></td>
+                                <td class="ocultar"><i>Anillo Lunar</i><br><small>Un anillo de las estrellas. Al usarlo, te sentirás ligero.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Piedra lunar (+0,4 kg)</span><br>
+                                    <span>1 Iridio (+0,4 kg)</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (1 - 7)</span><br>
+                                    <span><strong>Velocidad de excavación:</strong> (10 - 40%)</span><br>
+                                    <span><strong>Velocidad de sacudida:</strong> (10 - 40%)</span><br>
+                                </td>
+                                <td style="color: gold;">$500,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Gravity_Coil.png" alt="Gravity Coil"></td>
+                                <td class="ocultar"><i>Bobina de gravedad</i><br><small>Una bobina que reduce el peso del usuario, aumentando la cantidad que puede sostener.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Aurorita</span><br>
+                                    <span>1 Piedra lunar</span><br>
+                                    <span>1 Osmio</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Capacidad:</strong> (10 - 140)</span><br>
+                                </td>
+                                <td style="color: gold;">$1,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Heart_of_the_Ocean.webp" alt="Heart of the Ocean"></td>
+                                <td class="ocultar"><i>Corazón del Océano</i><br><small>Un anillo que resalta el poder del mar en quien lo usa.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>10 Coral</span><br>
+                                    <span>5 Conchas de Plata</span><br>
+                                    <span>3 Perlas Doradas</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (3 - 10)</span><br>
+                                    <span><strong>Velocidad de agitación:</strong> (0 - 20%)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (10 - 20%)</span><br>
+                                </td>
+                                <td style="color: gold;">$1,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="legendario" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Guiding_Light.png" alt="Guiding Light"></td>
+                                <td class="ocultar"><i>Luz guía</i><br><small>Un rayo de luz.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Ojo de gato</span><br>
+                                    <span>2 Perla dorada</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (5 - 20)</span><br>
+                                    <span><strong>Capacidad:</strong> (10 - 40)</span><br>
+                                    <span><strong>Aumento de modificador:</strong> (0 - 45%)</span><br>
+                                </td>
+                                <td style="color: gold;">$1,500,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Lightkeeper's_Ring.png" alt="Lightkeeper's Ring"></td>
+                                <td class="ocultar"><i>Anillo del Guardián de la Luz</i><br><small>Un anillo brillante hecho de aluminio. Ilumina el camino, incluso en las noches más oscuras.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>2 Ópalo</span><br>
+                                    <span>1 Aluminio</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Velocidad de excavación:</strong> (5 - 25%)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (5 - 25%)</span><br>
+                                    <span><strong>Impulso de modificador:</strong> (5 - 25%)</span><br>
+                                </td>
+                                <td style="color: gold;">$2,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Mass_Accumulator.png" alt="Mass Accumulator"></td>
+                                <td class="ocultar"><i>Acumulador de masa</i><br><small>Un dispositivo poderoso que emite radiación intensa, aumentando el tamaño de los objetos.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Aurorita</span><br>
+                                    <span>1 Uranio</span><br>
+                                    <span>2 Osmio</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Capacidad:</strong> (20 - 60)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (10 - 80%)</span><br>
+                                </td>
+                                <td style="color: gold;">$3,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Crown.png" alt="Crown"></td>
+                                <td class="ocultar"><i>Corona</i><br><small>Una corona con gemas incrustadas. Digno de un rey.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>3 Rubíes (+0,25 kg)</span><br>
+                                    <span>8 Oros (+1 kg)</span><br>
+                                    <span>2 Esmeraldas (+0,2 kg)</span><br>
+                                    <span>1 Diamante</span><br>
+                                    <span>3 Zafiros (+0,25 kg)</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (5 - 30)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (0 - 45%)</span><br>
+                                    <span><strong>Aumento de ventas:</strong> (0 - 90%)</span><br>
+                                </td>
+                                <td style="color: gold;">$5,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Dragon_Claw.webp" alt="Dragon Claw"></td>
+                                <td class="ocultar"><i>Garra de Dragón</i><br><small>Otorga al portador la fuerza de un dragón.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>5 Fósiles de amonita</span><br>
+                                    <span>2 Huesos de dragón</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Fuerza de excavación:</strong> (10 - 30)</span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (1 - 8)</span><br>
+                                </td>
+                                <td style="color: gold;">$10,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="mitico" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Royal_Federation_Crown.webp" alt="Royal Federation Crown"></td>
+                                <td class="ocultar"><i>Corona de la Real Federación</i><br><small>Una corona con gemas incrustadas. Digno de un rey.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>3 Oro rosa (+0,4 kg)</span><br>
+                                    <span>5 Perlas doradas (+0,2 kg)</span><br>
+                                    <span>1 Diamante rosa</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (10 - 90)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (0 - 90%)</span><br>
+                                    <span><strong>Aumento de ventas:</strong> (0 - 180%)</span><br>
+                                </td>
+                                <td style="color: gold;">$30,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Phoenix_Heart.png" alt="Phoenix Heart"></td>
+                                <td class="ocultar"><i>Corazón de Fénix</i><br><small>Un artefacto infernal que quema piedras preciosas, dejando solo las más valiosas atrás.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>3 Uranio</span><br>
+                                    <span>1 Inferlume</span><br>
+                                    <span>2 Starshine</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (100 - 300)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (-70 - -40%)</span><br>
+                                </td>
+                                <td style="color: gold;">$40,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Celestial_Rings.png" alt="Celestial Rings"></td>
+                                <td class="ocultar"><i>Anillos Celestiales</i><br><small>El poder de las estrellas.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Vortessence</span><br>
+                                    <span>8 Hierro meteórico (+0,3 kg)</span><br>
+                                    <span>5 Piedra lunar (+0,3 kg)</span><br>
+                                    <span>2 Ojo de gato</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (30 - 90)</span><br>
+                                    <span><strong>Capacidad:</strong> (50 - 250)</span><br>
+                                    <span><strong>Aumento de modificador:</strong> (20 - 140%)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (0 - 45%)</span><br>
+                                </td>
+                                <td style="color: gold;">$50,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Apocalypse_Bringer.webp" alt="Apocalypse Bringer"></td>
+                                <td class="ocultar"><i>Portador del Apocalipsis</i><br><small>Un anillo antiguo que señala el fin de los días.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>4 Ashvein</span><br>
+                                    <span>10 Rubí</span><br>
+                                    <span>2 Paladio</span><br>
+                                    <span>1 Painita</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (10 - 40)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (10 - 50%)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (5 - 20)</span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (2 - 5)</span><br>
+                                </td>
+                                <td style="color: gold;">$50,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Mythril_Ring.png" alt="Mythril Ring"></td>
+                                <td class="ocultar"><i>Anillo de Mithril</i><br><small>Un anillo legendario de mithril. Requiere el <span style="color: rgb(99, 150, 134);"><em>plano</em></span> del anillo para su fabricación.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>2 Turmalinas</span><br>
+                                    <span>2 Cinabrios</span><br>
+                                    <span>1 Brillo de estrellas</span><br>
+                                    <span>1 Mitrilo</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (20 - 80)</span><br>
+                                    <span><strong>Velocidad de excavación:</strong> (20 - 40%)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (5 - 24%)</span><br>
+                                    <span><strong>Velocidad de sacudida:</strong> (20 - 40%)</span><br>
+                                </td>
+                                <td style="color: gold;">$60,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Phoenix_Wings.png" alt="Phoenix Wings"></td>
+                                <td class="ocultar"><i>Alas de Fénix</i><br><small>Muerte y renacimiento.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Flarebloom</span><br>
+                                    <span>2 Cinabrio</span><br>
+                                    <span>2 Ópalo de fuego</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (100 - 300)</span><br>
+                                    <span><strong>Capacidad:</strong> (-80 - -40)</span><br>
+                                </td>
+                                <td style="color: gold;">$65,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Prismatic_Star.webp" alt="Prismatic Star"></td>
+                                <td class="ocultar"><i>Estrella Prismática</i><br><small>Un anillo luminiscente infundido con la luz del mundo.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Diamante</span><br>
+                                    <span>1 Prismara</span><br>
+                                    <span>1 Diamante Rosa</span><br>
+                                    <span>5 Borealita</span><br>
+                                    <span>1 Luminum</span><br>
+                                    <span>1 Starshine</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (5 - 20)</span><br>
+                                    <span><strong>Capacidad:</strong> (10 - 40)</span><br>
+                                    <span><strong>Velocidad de excavación:</strong> (5 - 20%)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (10 - 20%)</span><br>
+                                    <span><strong>Impulso de modificador:</strong> (5 - 20%)</span><br>
+                                    <span><strong>Impulso de tamaño:</strong> (5 - 20%)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (2 - 10)</span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (1 - 3)</span><br>
+                                    <span><strong>Velocidad de sacudida:</strong> (5 - 20%)</span><br>
+                                </td>
+                                <td style="color: gold;">$75,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Cryogenic_Preserver.png" alt="Cryogenic Preserver"></td>
+                                <td class="ocultar"><i>Preservador Criogénico</i><br><small>Un dispositivo que congela el cuerpo del usuario, aumentando su fuerza... y quizás su esperanza de vida. Requiere el <span style="color: rgb(99, 150, 134);"><em>plano</em></span> del Preservador Criogénico para su fabricación.</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>5 Borealita</span><br>
+                                    <span>1 Fragmento de escarcha</span><br>
+                                    <span>3 Aetherita</span><br>
+                                    <span>1 Mithril</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (100 - 250)</span><br>
+                                    <span><strong>Velocidad de agitación:</strong> (-20 - -40%)</span><br>
+                                    <span><strong>Impulso de venta:</strong> (0 - 50%)</span><br>
+                                    <span><strong>Fuerza de agitación:</strong> (10 - 40)</span><br>
+                                </td>
+                                <td style="color: gold;">$75,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Solar_Ring.png" alt="Solar Ring"></td>
+                                <td class="ocultar"><i>Anillo Solar</i><br><small>Un anillo solar bendecido.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Vortessence</span><br>
+                                    <span>2 Ópalo de fuego</span><br>
+                                    <span>1 Núcleo volcánico</span><br>
+                                    <span>10 Pyronium</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (20 - 100)</span><br>
+                                    <span><strong>Aumento de modificador:</strong> (5 - 20%)</span><br>
+                                    <span><strong>Velocidad de excavación:</strong> (-30 - -10%)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (2 - 8)</span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (0 - 2)</span><br>
+                                    <span><strong>Velocidad de sacudida:</strong> (-30 - -10%)</span><br>
+                                </td>
+                                <td style="color: gold;">$90,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="exotico" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>Ranura</th>
+                                <th class="ocultar1">Receta</th>
+                                <th class="ocultar2">Estadísticas</th>
+                                <th>Costo $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Fossilized_Crown.webp" alt="Fossilized Crown"></td>
+                                <td class="ocultar"><i>Corona fosilizada</i><br><small>...</small></td>
+                                <td><em>Encanto</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Cráneo de Dinosaurio</span><br>
+                                    <span>5 Cinabrios</span><br>
+                                    <span>1 Núcleo Volcánico</span><br>
+                                    <span>5 Huesos de Dragón</span><br>
+                                </td>
+                                <td class="ocultar 2">
+                                    <span><strong>Suerte:</strong> (50 - 200)</span><br>
+                                    <span><strong>Capacidad:</strong> (50 - 200)</span><br>
+                                    <span><strong>Velocidad de movimiento:</strong> (10 - 30%)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (0 - 50%)</span><br>
+                                    <span><strong>Aumento de ventas:</strong> (0 - 100%)</span><br>
+                                </td>
+                                <td style="color: gold;">$100,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Frostthorn_Pendant.png" alt="Frostthorn Pendant"></td>
+                                <td class="ocultar"><i>Colgante de Espina de Hielo</i><br><small>Un colgante helado. Requiere el <span style="color: rgb(99, 150, 134);"><em>plano</em></span> del Colgante de Espina de Hielo para fabricarlo.</small></td>
+                                <td><em>Collar</em></td>
+                                <td class="ocultar1">
+                                    <span>5 Turmalinas</span><br>
+                                    <span>10 Cobaltos</span><br>
+                                    <span>2 Fragmentos de Escarcha</span><br>
+                                    <span>5 Aguamarinas</span><br>
+                                    <span>1 Artefacto Criónico</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (100 - 400)</span><br>
+                                    <span><strong>Capacidad:</strong> (50 - 200)</span><br>
+                                    <span><strong>Velocidad de excavación:</strong> (-50 - -30%)</span><br>
+                                    <span><strong>Aumento de tamaño:</strong> (30 - 100%)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (100 - 200)</span><br>
+                                </td>
+                                <td style="color: gold;">$200,000,000</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Vortex_Ring.webp" alt="Vortex Ring"></td>
+                                <td class="ocultar"><i>Anillo Vórtice</i><br><small>Un anillo con intensa fuerza gravitacional, que aumenta su capacidad y potencia. Requiere el <span style="color: rgb(148, 59, 148);"><em>plano</em></span> del Anillo Vórtice para su fabricación.</small></td>
+                                <td><em>Anillo</em></td>
+                                <td class="ocultar1">
+                                    <span>1 Piedra del Vacío</span><br>
+                                    <span>2 Prismara</span><br>
+                                    <span>3 Vortessence</span><br>
+                                </td>
+                                <td class="ocultar2">
+                                    <span><strong>Suerte:</strong> (50 - 140)</span><br>
+                                    <span><strong>Capacidad:</strong> (100 - 300)</span><br>
+                                    <span><strong>Fuerza de excavación:</strong> (20 - 80)</span><br>
+                                    <span><strong>Fuerza de sacudida:</strong> (3 - 10)</span><br>
+                                </td>
+                                <td style="color: gold;">$333,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+
+    <footer>
+        <p>© 2025 Wiki Prospecting Roblox. Página hecha por fans. No afiliado con Roblox Corporation.</p>
+    </footer>
+
+</body>
+</html>

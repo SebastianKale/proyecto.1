@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>WikiBlox! - Minerals</title>
+</head>
+<body>
+    <header class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img class="logo" src="../img/prospecting.webp" alt="imagen de logo">
+                    </a>
+                    <a class="navbar-brand" href="../index.html">WikiBlox!</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navegar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/pans.html">Pans</a></li>
+                                    <li><a class="dropdown-item" href="../pages/shovels.html">Shovels</a></li>
+                                    <li><a class="dropdown-item" href="../pages/minerals.html">Minerals</a></li>
+                                    <li><a class="dropdown-item" href="../pages/sluices.html">Sluices</a></li>
+                                    <li><a class="dropdown-item" href="../pages/equipment.html">Equipment</a></li>
+                                    <li><a class="dropdown-item" href="#">Enchanting</a></li>
+                                    <li><a class="dropdown-item" href="#">Locations</a></li>
+                                    <li><a class="dropdown-item" href="#">Traveling Merchant</a></li>
+                                    <li><a class="dropdown-item" href="#">Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Quests</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-box">
+            <h1>Minerals</h1>
+            <p class="subtitle">From Nikkis</p>
+            <p class="text-content"><strong>Los minerales</strong> se pueden obtener mediante la prospección y luego venderse a un <a href="#">comerciante</a>. Los minerales tienen diferentes rarezas y se encuentran en distintos depósitos. Cada mineral encontrado por el jugador se documenta en el objeto <em>"Colección"</em>, que forma parte del equipo que se obtiene al unirse al juego.</p>
+
+            <div class="toggle-header" onclick="toggleTabList()">
+                <h2><span id="arrow" class="arrow">▲</span> Modificadores</h2>
+            </div>
+            <div id="tabList">
+                <p class="modificador">Los modificadores afectan los valores de los minerales .</p>
+                <div class="tabla-modificadores-container">
+                    <table class="tabla-modificadores">
+                        <thead>
+                            <tr>
+                                <th>Modificadores</th>
+                                <th>Multiplicadores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span><strong>Shiny</strong></span></td>
+                                <td><span>1.2x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Pure</strong></span></td>
+                                <td><span>1.35x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Glowing</strong></span></td>
+                                <td><span>1.6x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Scorching</strong></span></td>
+                                <td><span>2x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Irradiated</strong></span></td>
+                                <td><span>2.5x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Iridescent</strong></span></td>
+                                <td><span>3.5x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Electrified</strong></span></td>
+                                <td><span>5x</span></td>
+                            </tr>
+                            <tr>
+                                <td><span><strong>Voidtorn</strong></span></td>
+                                <td><span>11x</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="toggle-header2" onclick="toggleTabList2()">
+                <h2><span id="arrow2" class="arrow2">▲</span> Lista de minerals</h2>
+            </div>
+            <div id="tabList2">
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('comun')">Común</div>
+                    <div class="tab" onclick="showTab('poco-comun')">Poco común</div>
+                    <div class="tab" onclick="showTab('raro')">Raro</div>
+                    <div class="tab" onclick="showTab('epico')">Épico</div>
+                    <div class="tab" onclick="showTab('legendario')">Legendario</div>
+                    <div class="tab" onclick="showTab('mitico')">Mítico</div>
+                    <div class="tab" onclick="showTab('exotico')">Exótico</div>
+                </div>
+                <div id="comun" class="tab-content active">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Pyrite.webp" alt="Pyrite"></td>
+                                <td class="ocultar"><i>Pirita</i><br><small>También conocida como "oro de los tontos". Esencialmente inútil.</small></td>
+                                <td style="color: gold;">$500</td>
+                                <td style="color: orange;">Rubble Creek Sands</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Silver.webp" alt="Silver"></td>
+                                <td class="ocultar"><i>Plata</i><br><small>Una pepita de plata.</small></td>
+                                <td style="color: gold;">$700</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Crystal Cavern River, Azuralite Oasis, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Copper.webp" alt="Copper"></td>
+                                <td class="ocultar"><i>Cobre</i><br><small>Un metal maleable comúnmente utilizado en electrónica.</small></td>
+                                <td style="color: gold;">$800</td>
+                                <td style="color: orange;">Crystal Cavern River, Azuralite Oasis, Volcanic Sands, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Gold.webp" alt="Gold"></td>
+                                <td class="ocultar"><i>Oro</i><br><small>Una pepita de oro.</small></td>
+                                <td style="color: gold;">$1,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Fortune River Delta, Crystal Cavern River, Azuralite Oasis, Volcanic Sands, The Magma Furnace</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Platinum.webp" alt="Platinum"></td>
+                                <td class="ocultar"><i>Platino</i><br><small>Una pepita de platino.</small></td>
+                                <td style="color: gold;">$2,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Seashell.webp" alt="Seashell"></td>
+                                <td class="ocultar"><i>Concha</i><br><small>La concha de una almeja.</small></td>
+                                <td style="color: gold;">$2,200</td>
+                                <td style="color: orange;">Sunset Beach, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Obsidian.webp" alt="Obsidian"></td>
+                                <td class="ocultar"><i>Obsidiana</i><br><small>Fragmento de obsidiana de color negro azabache. Se forma cuando la lava se enfría rápidamente.</small></td>
+                                <td style="color: gold;">$3,000</td>
+                                <td style="color: orange;">Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Amethyst.webp" alt="Amethyst"></td>
+                                <td class="ocultar"><i>Amatista</i><br><small>Una piedra preciosa de amatista púrpura.</small></td>
+                                <td style="color: gold;">$3,500</td>
+                                <td style="color: orange;">Rubble Creek Sands, Crystal Cavern River, Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Pearl.webp" alt="Pearl"></td>
+                                <td class="ocultar"><i>Perla</i><br><small>Una perla redonda de una ostra.</small></td>
+                                <td style="color: gold;">$5,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Blue_Ice.webp" alt="Blue Ice"></td>
+                                <td class="ocultar"><i>Hielo azul</i><br><small>Un trozo de hielo azul comprimido en un glaciar durante millones de años.</small></td>
+                                <td style="color: gold;">$1,500</td>
+                                <td style="color: orange;">Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="poco-comun" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Titanium.webp" alt="Titanium"></td>
+                                <td class="ocultar"><i>Titanio</i><br><small>Una pieza de titanio puro.</small></td>
+                                <td style="color: gold;">$7,500</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River Delta, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Neodymium.webp" alt="Neodymium"></td>
+                                <td class="ocultar"><i>Neodimio</i><br><small>Un ingrediente clave en los imanes de alta resistencia.</small></td>
+                                <td style="color: gold;">$10,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Crystal Cavern River, Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Topaz.webp" alt="Topaz"></td>
+                                <td class="ocultar"><i>Topacio</i><br><small>Una piedra preciosa de topacio. Símbolo de fuerza y honor.</small></td>
+                                <td style="color: gold;">$14,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Fortune River Delta, Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Smoky_Quartz.webp" alt="Smoky Quartz"></td>
+                                <td class="ocultar"><i>Cuarzo ahumado</i><br><small>Un tipo de cuarzo con un color gris único.</small></td>
+                                <td style="color: gold;">$16,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Crystal Cavern River, Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Malachite.webp" alt="Malachite"></td>
+                                <td class="ocultar"><i>Malaquita</i><br><small>Un cristal verde vibrante, cuyo color se debe al cobre que contiene.</small></td>
+                                <td style="color: gold;">$18,000</td>
+                                <td style="color: orange;">Crystal Cavern River, Azuralite Oasis, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Coral.webp" alt="Coral"></td>
+                                <td class="ocultar"><i>Coral</i><br><small>Un trozo de coral de una especie en peligro de extinción.</small></td>
+                                <td style="color: gold;">$23,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Sapphire.webp" alt="Sapphire"></td>
+                                <td class="ocultar"><i>Zafiro</i><br><small>Un zafiro azul.</small></td>
+                                <td style="color: gold;">$25,000</td>
+                                <td style="color: orange;">Rubble Creek Deposits, Fortune River, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Zircon.webp" alt="Zircon"></td>
+                                <td class="ocultar"><i>Circón</i><br><small>Una piedra preciosa de color naranja oscuro que contiene circonio.</small></td>
+                                <td style="color: gold;">$25,000</td>
+                                <td style="color: orange;">Volcanic Sands, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="raro" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Ruby.webp" alt="Ruby"></td>
+                                <td class="ocultar"><i>Rubí</i><br><small>Una piedra preciosa de color rojo rubí brillante.</small></td>
+                                <td style="color: gold;">$30,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Lapis_Lazuli.webp" alt="Lapis Lazuli"></td>
+                                <td class="ocultar"><i>Lapislázuli</i><br><small>Una piedra de lapislázuli vibrante e intensa.</small></td>
+                                <td style="color: gold;">$40,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Jade.webp" alt="Jade"></td>
+                                <td class="ocultar"><i>Jade</i><br><small>Un trozo de jade verde.</small></td>
+                                <td style="color: gold;">$40,000</td>
+                                <td style="color: orange;">Fortune River, Fortune River Delta, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Silver_Clamshell.webp" alt="Silver Clamshell"></td>
+                                <td class="ocultar"><i>Concha de almeja plateada</i><br><small>La concha de una rara almeja plateada.</small></td>
+                                <td style="color: gold;">$50,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Peridot.webp" alt="Peridot"></td>
+                                <td class="ocultar"><i>Peridoto</i><br><small>Una piedra preciosa de color verde oliva que aparece comúnmente en rocas volcánicas.</small></td>
+                                <td style="color: gold;">$60,000</td>
+                                <td style="color: orange;">Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Onyx.webp" alt="Onyx"></td>
+                                <td class="ocultar"><i>Ónix</i><br><small>Una gema de ónix de color negro azabache.</small></td>
+                                <td style="color: gold;">$75,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta, Crystal Cavern River, Azuralite Oasis, Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Meteoric_Iron.webp" alt="Meteoric Iron"></td>
+                                <td class="ocultar"><i>Hierro meteórico</i><br><small>Un trozo de hierro infundido con energía proveniente de la exposición a los meteoritos.</small></td>
+                                <td style="color: gold;">$80,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Volcanic Sands, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Azuralite.webp" alt="Azuralite"></td>
+                                <td class="ocultar"><i>Azuralita</i><br><small>Un misterioso cristal azul con extrañas propiedades de crecimiento y origen desconocido.</small></td>
+                                <td style="color: gold;">$120,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Volcanic Sands, Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Pyrelith.webp" alt="Pyrelith"></td>
+                                <td class="ocultar"><i>Pirelito</i><br><small>Un cristal energético formado en el corazón de un volcán.</small></td>
+                                <td style="color: gold;">$150,000</td>
+                                <td style="color: orange;">The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Glacial_Quartz.webp" alt="Glacial Quartz"></td>
+                                <td class="ocultar"><i>Cuarzo glacial</i><br><small>Una variante del cuarzo con forma de carámbano que se forma en condiciones de frío extremo.</small></td>
+                                <td style="color: gold;">$100,000</td>
+                                <td style="color: orange;">Frostbite River, Frostbite Waterfall, Frozen Pea</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="epico" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Iridium.webp" alt="Iridium"></td>
+                                <td class="ocultar"><i>Iridio</i><br><small>Un metal celestial raro traído a la tierra por los meteoritos.</small></td>
+                                <td style="color: gold;">$155,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Fortune River Delta, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Moonstone.webp" alt="Moonstone"></td>
+                                <td class="ocultar"><i>Piedra lunar</i><br><small>Un trozo de piedra de la propia luna.</small></td>
+                                <td style="color: gold;">$200,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Ammonite_Fossil.webp" alt="Ammonite Fossil"></td>
+                                <td class="ocultar"><i>Fósil de amonita</i><br><small>Restos de un antiguo molusco.</small></td>
+                                <td style="color: gold;">$200,000</td>
+                                <td style="color: orange;">Windswept Beach</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Ashvein.webp" alt="Ashvein"></td>
+                                <td class="ocultar"><i>Ashvein</i><br><small>Un cristal parecido a la obsidiana con vetas rojas.</small></td>
+                                <td style="color: gold;">$222,000</td>
+                                <td style="color: orange;">Sunset Beach, Crystal Cavern River, Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Pyronium.webp" alt="Pyronium"></td>
+                                <td class="ocultar"><i>Pironio</i><br><small>Un metal volcánico que emite calor constantemente.</small></td>
+                                <td style="color: gold;">$226,000</td>
+                                <td style="color: orange;">Volcanic Sands, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Emerald.webp" alt="Emerald"></td>
+                                <td class="ocultar"><i>Esmeralda</i><br><small>Una esmeralda rara con un tono verde vibrante.</small></td>
+                                <td style="color: gold;">$250,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Crystal Cavern River, Azuralite Oasis, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Golden_Pearl.webp" alt="Golden Pearl"></td>
+                                <td class="ocultar"><i>Perla dorada</i><br><small>Una variante de perla increíblemente rara con un color dorado distintivo.</small></td>
+                                <td style="color: gold;">$250,000</td>
+                                <td style="color: orange;">Sunset Beach, Fortune River Delta</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Cobalt.webp" alt="Cobalt"></td>
+                                <td class="ocultar"><i>Cobalto</i><br><small>Una pieza de cobalto de un azul llamativo. Se utiliza en electrónica avanzada.</small></td>
+                                <td style="color: gold;">$250,000</td>
+                                <td style="color: orange;">Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Borealite.webp" alt="Borealite"></td>
+                                <td class="ocultar"><i>Borealita</i><br><small>Una piedra preciosa fría.</small></td>
+                                <td style="color: gold;">$280,000</td>
+                                <td style="color: orange;">Crystal Cavern River, Azuralite Oasis, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Osmium.webp" alt="Osmium"></td>
+                                <td class="ocultar"><i>Osmio</i><br><small>Un metal denso y altamente tóxico, apreciado por su rareza.</small></td>
+                                <td style="color: gold;">$300,000</td>
+                                <td style="color: orange;">Rubble Creek Deposits, Fortune River, Crystal Cavern River, Azuralite Oasis, Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Opal.webp" alt="Opal"></td>
+                                <td class="ocultar"><i>Ópalo</i><br><small>Un ópalo iridiscente.</small></td>
+                                <td style="color: gold;">$325,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Sunset Beach, Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Aurorite.webp" alt="Aurorite"></td>
+                                <td class="ocultar"><i>Aurorita</i><br><small>Un cristal misterioso lleno de poder mágico. Quizás podría usarlo para algo...</small></td>
+                                <td style="color: gold;">$444,444</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Fortune River Delta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="legendario" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Rose_Gold.webp" alt="Rose Gold"></td>
+                                <td class="ocultar"><i>Oro rosa</i><br><small>Una forma extremadamente rara de oro con un distintivo color rosa.</small></td>
+                                <td style="color: gold;">$500,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Volcanic Sands, Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Palladium.webp" alt="Palladium"></td>
+                                <td class="ocultar"><i>Paladio</i><br><small>Una brillante pieza de paladio conocida por sus propiedades únicas.</small></td>
+                                <td style="color: gold;">$500,000</td>
+                                <td style="color: orange;">Fortune River, Fortune River Delta, Crystal Cavern River, Azuralite Oasis, Frostbite River</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Cinnabar.webp" alt="Cinnabar"></td>
+                                <td class="ocultar"><i>Cinabrio</i><br><small>Un trozo de cinabrio de color bermellón. Se usa comúnmente para extraer mercurio.</small></td>
+                                <td style="color: gold;">$900,000</td>
+                                <td style="color: orange;">Volcanic Sands, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Diamond.webp" alt="Diamond"></td>
+                                <td class="ocultar"><i>Diamante</i><br><small>Una gema de diamante rara. Increíblemente dura y reflectante.</small></td>
+                                <td style="color: gold;">$1,000,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Sunset Beach, Fortune River Delta, Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Uranium.webp" alt="Uranium"></td>
+                                <td class="ocultar"><i>Uranio</i><br><small>Un trozo radiactivo de uranio.</small></td>
+                                <td style="color: gold;">$1,500,000</td>
+                                <td style="color: orange;">Fortune River, Fortune River Delta, Azuralite Oasis, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Luminum.webp" alt="Luminum"></td>
+                                <td class="ocultar"><i>Luminum</i><br><small>Un metal extraño que emite constantemente una luz amarilla brillante.</small></td>
+                                <td style="color: gold;">$1,500,000</td>
+                                <td style="color: orange;">Sunset Beach, Crystal Cavern River, Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Volcanic_Key.webp" alt="Volcanic Key"></td>
+                                <td class="ocultar"><i>Llave Volcánica</i><br><small>Una llave misteriosa. Podría venderse por mucho dinero, pero ¿Quizás tenga otro uso?</small></td>
+                                <td style="color: gold;">$1,500,000</td>
+                                <td style="color: orange;">The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Fire_Opal.webp" alt="Fire Opal"></td>
+                                <td class="ocultar"><i>Ópalo de fuego</i><br><small>Un tipo de ópalo con un brillo anaranjado brillante.</small></td>
+                                <td style="color: gold;">$1,600,000</td>
+                                <td style="color: orange;">Volcanic Sands, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Dragon_Bone.webp" alt="Dragon Bone"></td>
+                                <td class="ocultar"><i>Hueso de Dragón</i><br><small>El hueso de un dragón antiguo.</small></td>
+                                <td style="color: gold;">$2,000,000</td>
+                                <td style="color: orange;">Windswept Beach, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Catseye.webp" alt="Catseye"></td>
+                                <td class="ocultar"><i>Ojo de Gato</i><br><small>Un ojo de gato dorado. Se cree que contiene una maldición mortal.</small></td>
+                                <td style="color: gold;">$2,222,222</td>
+                                <td style="color: orange;">Rubble Creek Deposits, Fortune River, Volcanic Sands, Windswept Beach, The Magma Furnace</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Starshine.webp" alt="Starshine"></td>
+                                <td class="ocultar"><i>Brillo de estrellas</i><br><small>Un fragmento astral que rara vez se encuentra en el núcleo de grandes meteoritos.</small></td>
+                                <td style="color: gold;">$2,500,000</td>
+                                <td style="color: orange;">Crystal Cavern River, Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Tourmaline.webp" alt="Tourmaline"></td>
+                                <td class="ocultar"><i>Turmalina</i><br><small>Un cristal de turmalina amarilla.</small></td>
+                                <td style="color: gold;">$2,888,000</td>
+                                <td style="color: orange;">Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Aquamarine.webp" alt="Aquamarine"></td>
+                                <td class="ocultar"><i>Aguamarina</i><br><small>Un cristal de color azul verdoso pálido.</small></td>
+                                <td style="color: gold;">$4,000,000</td>
+                                <td style="color: orange;">Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Aetherite.webp" alt="Aetherite"></td>
+                                <td class="ocultar"><i>Aetherite</i><br><small>Una variante purificada de aurorita utilizada en rituales de encantamiento.</small></td>
+                                <td style="color: gold;">$4,444,444</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Sunset Beach, Fortune River Delta, Crystal Cavern River, Azuralite Oasis, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="mitico" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Pink_Diamond.webp" alt="Pink Diamond"></td>
+                                <td class="ocultar"><i>Diamante rosa</i><br><small>Una variante de diamante con un tinte rosa único.</small></td>
+                                <td style="color: gold;">$6,000,000</td>
+                                <td style="color: orange;">Rubble Creek Sands, Rubble Creek Deposits, Fortune River, Fortune River Delta, Volcanic Sands</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Palnite.webp" alt="Painite"></td>
+                                <td class="ocultar"><i>Painita</i><br><small>Una piedra preciosa extremadamente rara con un color rojo vibrante.</small></td>
+                                <td style="color: gold;">$10,000,000</td>
+                                <td style="color: orange;">Fortune River, Sunset Beach, Fortune River Delta</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Inferlume.webp" alt="Inferlume"></td>
+                                <td class="ocultar"><i>Inferlume</i><br><small>Un cristal luminiscente con propiedades similares a las de una llama.</small></td>
+                                <td style="color: gold;">$14,000,000</td>
+                                <td style="color: orange;">Sunset Beach, Crystal Cavern River, Azuralite Oasis, Volcanic Sands, Windswept Beach, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Vortessence.webp" alt="Vortessence"></td>
+                                <td class="ocultar"><i>Vortesencia</i><br><small>Una piedra celestial con anillos distintivos. Se cree que se formó por el colapso de una estrella.</small></td>
+                                <td style="color: gold;">$20,000,000</td>
+                                <td style="color: orange;">Fortune River Delta, Crystal Cavern River, Azuralite Oasis, Windswept Beach, Frostbite River, Frostbite Waterfall</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Prismara.png" alt="Prismara"></td>
+                                <td class="ocultar"><i>Prismara</i><br><small>Formado por el mundo mismo.</small></td>
+                                <td style="color: gold;">$25,000,000</td>
+                                <td style="color: orange;">Azuralite Oasis</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Flarebloom.webp" alt="Flarebloom"></td>
+                                <td class="ocultar"><i>Flarebloom</i><br><small>Una flor mítica que sólo crece en el calor extremo del centro de un volcán.</small></td>
+                                <td style="color: gold;">$30,000,000</td>
+                                <td style="color: orange;">Volcanic Sands, The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Volcanic_Core.webp" alt="Volcanic Core"></td>
+                                <td class="ocultar"><i>Núcleo volcánico</i><br><small>El núcleo inestable de un volcán. Contiene el potencial de causar una destrucción inmensa.</small></td>
+                                <td style="color: gold;">$40,000,000</td>
+                                <td style="color: orange;">The Magma Furnace, Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Mythril.webp" alt="Mythril"></td>
+                                <td class="ocultar"><i>Mithril</i><br><small>Una pepita del mítico metal mithril.</small></td>
+                                <td style="color: gold;">$20,000,000</td>
+                                <td style="color: orange;">Frostbite River, Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral" src="../img/Frostshard.webp" alt="Frostshard"></td>
+                                <td class="ocultar"><i>Fragmento de Escarcha</i><br><small>Un cristal dentado formado en las montañas que congela constantemente el área que lo rodea.</small></td>
+                                <td style="color: gold;">$50,000,000</td>
+                                <td style="color: orange;">Frostbite Waterfall, Frozen Peak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="exotico" class="tab-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Apariencia</th>
+                                <th class="ocultar">Nombre/Drescrpción</th>
+                                <th>$ / kg</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="img-mineral2" src="../img/Dinosaur_Skull.webp" alt="Dinosaur Skull"></td>
+                                <td class="ocultar"><i>Cráneo de dinosaurio</i><br><small>Un cráneo de dinosaurio. ¡¿Qué hace esto aquí?!</small></td>
+                                <td style="color: gold;">$50,000,000</td>
+                                <td style="color: orange;">Infernal Heart</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral2" src="../img/Cryonic_Artifact.webp" alt="Cryonic Artifact"></td>
+                                <td class="ocultar"><i>Artefacto criónico</i><br><small>Un artefacto misterioso. ¿Cuál es su propósito?</small></td>
+                                <td style="color: gold;">$100,000,000</td>
+                                <td style="color: orange;">Frozen Peak</td>
+                            </tr>
+                            <tr>
+                                <td><img class="img-mineral2" src="../img/Voidstone.webp" alt="Voidstone"></td>
+                                <td class="ocultar"><i>Piedra del Vacío</i><br><small>Un cristal formado a partir del vacío.</small></td>
+                                <td style="color: gold;">$111,111,111</td>
+                                <td style="color: orange;">The Void</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Wiki Prospecting Roblox. Página hecha por fans. No afiliado con Roblox Corporation.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+
+</body>
+</html>

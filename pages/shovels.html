@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <title>WikiBlox! - Shovels</title>
+</head>
+<body>
+    <header class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img class="logo" src="../img/prospecting.webp" alt="imagen de logo">
+                    </a>
+                    <a class="navbar-brand" href="../index.html">WikiBlox!</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navegar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/pans.html">Pans</a></li>
+                                    <li><a class="dropdown-item" href="../pages/shovels.html">Shovels</a></li>
+                                    <li><a class="dropdown-item" href="../pages/minerals.html">Minerals</a></li>
+                                    <li><a class="dropdown-item" href="../pages/sluices.html">Sluices</a></li>
+                                    <li><a class="dropdown-item" href="../pages/equipment.html">Equipment</a></li>
+                                    <li><a class="dropdown-item" href="#">Enchanting</a></li>
+                                    <li><a class="dropdown-item" href="#">Locations</a></li>
+                                    <li><a class="dropdown-item" href="#">Traveling Merchant</a></li>
+                                    <li><a class="dropdown-item" href="#">Events</a></li>
+                                    <li><a class="dropdown-item" href="#">Quests</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-box">
+            <h1>Shovels</h1>
+            <p class="subtitle">From Nikkis</p>
+            <p class="text-content"><strong>Las palas</strong> son una de las herramientas clave que utiliza el jugador en <em>Prospecting!</em> y son vitales para progresar.</p>
+            <p class="text-content">Generalmente se los puede encontrar cerca de los <a href="#">comerciantes</a> , junto con sus contrapartes <a href="../pages/pans.html">sartenes</a></p>
+            
+            <div class="toggle-header" onclick="toggleTabList()">
+                <h2><span id="arrow" class="arrow">▲</span> Lista de Shovels</h2>
+            </div>
+            <div id="tabList" class="table-container">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Apariencia</th>
+                            <th class="ocultar">Nombre/Descripción</th>
+                            <th>Precio</th>
+                            <th class="ocultar1">Estadísticas</th>
+                            <th>Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img class="img2" src="../img/RustyShovel.png" alt="Rusty Shovel"></td>
+                            <td class="ocultar"><strong><em>Rusty Shovel</em></strong><br><span>Una pala oxidada a punto de romperse. Funciona bien... por ahora.</span></td>
+                            <td>Gratis</td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 1 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 0.8 </span><br>
+                                <span><strong>Dureza:</strong> 1 </span>
+                            </td>
+                            <td>Se entrega al jugador al unirse.</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/IronShovel.webp" alt="Iron Shovel"></td>
+                            <td class="ocultar"><strong><em>Iron Shovel</em></strong><br><span>Una pala de hierro resistente.</span></td>
+                            <td style="color: #FFD700;"><strong>$3,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 2 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 0.8 </span><br>
+                                <span><strong>Dureza:</strong> 1 </span>
+                            </td>
+                            <td><span style="color: #DBBD74;">Rubble Creek</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/SteelShovel.webp" alt="Steel Shovel"></td>
+                            <td class="ocultar"><strong><em>Steel Shovel</em></strong><br><span>Una pala resistente de acero. Puede excavar en depósitos más duros.</span></td>
+                            <td style="color: #FFD700;"><strong>$25,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 3 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 0.8 </span><br>
+                                <span><strong>Dureza:</strong> 2 </span><br>
+                            </td>
+                            <td><span style="color: #DBBD74;">Rubble Creek</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/SilverShovel.webp" alt="Silver Shovel"></td>
+                            <td class="ocultar"><strong><em>Silver Shovel</em></strong><br><span>Una pala ligera de plata. ¿Cómo puede la plata ser tan resistente?</span></td>
+                            <td style="color: #FFD700;"><strong>$75,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 4 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 1.1  </span><br>
+                                <span><strong>Dureza:</strong> 2 </span><br>
+                            </td>
+                            <td><span style="color: #DBBD74;">Rubble Creek</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/ReinforcedShovel.png" alt="Reinforced Shovel"></td>
+                            <td class="ocultar"><strong><em>Reinforced Shovel</em></strong><br><span> Una pala de titanio confiable diseñada para condiciones difíciles.</span></td>
+                            <td style="color: #FFD700;"><strong>$135,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 5 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 0.9 </span><br>
+                                <span><strong>Dureza:</strong> 3 </span><br>
+                            </td>
+                            <td><span style="color: #DBBD74;">Rubble Creek</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/TheExcavator.webp" alt="The Excavator"></td>
+                            <td class="ocultar"><strong><em>The Excavator</em></strong><br><span>Una pala poderosa que puede romper piedras.</span></td>
+                            <td style="color: #FFD700;"><strong>$320,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 7 </span><br>
+                                <span><strong>Velocidad de agitación:</strong> 0.7 </span><br>
+                                <span><strong>Dureza:</strong> 3 </span><br>
+                            </td>
+                            <td><span style="color: #E9AC07;">Fortune River</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/GoldenShovel.webp" alt="Golden Shovel"></td>
+                            <td class="ocultar"><strong><em>Golden Shovel</em></strong><br><span>Una preciosa pala hecha de una rara aleación de oro.</span></td>
+                            <td style="color: #FFD700;"><strong>$1,333,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 8 </span><br>
+                                <span><strong>Velociad de agitación:</strong> 1 </span><br>
+                                <span><strong>Dureza:</strong> 3 </span><br>
+                            </td>
+                            <td><span style="color: #E9AC07;">Fortune River</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/MeteoricShovel.webp" alt="Meteoric Shovel"></td>
+                            <td class="ocultar"><strong><em>Meteoric Shovel</em></strong><br><span>Una pala forjada con hierro meteórico. Sostenerla te llena de energía.</span></td>
+                            <td style="color: #FFD700;"><strong>$4,000,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 7 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 1.5 </span><br>
+                                <span><strong>Dureza:</strong> 4 </span><br>
+                            </td>
+                            <td><span style="color: #E9AC07;">Fortune River</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/DiamondShovel.png" alt="Diamond Shovel"></td>
+                            <td class="ocultar"><strong><em>Diamond Shovel</em></strong><br><span>¡Una pala hecha de diamante, el material más duro!</span></td>
+                            <td style="color: #FFD700;"><strong>$12,500,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 12 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 1 </span><br>
+                                <span><strong>Dureza:</strong> 4 </span><br>
+                            </td>
+                            <td><span style="color: #E9AC07;">Fortune River</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/DivineShovel.png" alt="Divine Shovel"></td>
+                            <td class="ocultar"><strong><em>Divine Shovel</em></strong><br><span>Una pala divina bendecida con la fuerza de romper casi cualquier cosa.</span></td>
+                            <td style="color: #FFD700;"><strong>$40,000,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 16 </span><br>
+                                <span><strong>Velocidad de agitación:</strong> 1.1 </span><br>
+                                <span><strong>Dureza:</strong> 5 </span><br>
+                            </td>
+                            <td><span style="color: #309EF6;">Crystal Cavern River</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/EarthbreakerShovel.webp" alt="Earthbreaker"></td>
+                            <td class="ocultar"><strong><em>Earthbreaker</em></strong><br><span>Una reliquia de una antigua civilización. A pesar de su antigüedad, aún alberga un poder increíble.</span></td>
+                            <td style="color: #FFD700;"><strong>$125,000,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 25 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 1 </span><br>
+                                <span><strong>Dureza:</strong> 5 </span><br>
+                            </td>
+                            <td><span style="color: #555543;">Waterfall Temple</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/Dragonflame_Shovel.webp" alt="Dragonflame Shovel"></td>
+                            <td class="ocultar"><strong><em>Dragonflame Shovel</em></strong><br><span>Una pala llameante que quema todos los depósitos.</span></td>
+                            <td style="color: #FFD700;"><strong>$400,000,000</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 50 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 0.6 </span><br>
+                                <span><strong>Dureza:</strong> 5 </span><br>
+                            </td>
+                            <td><span style="color: #BB0A00;">The Magma Furnace</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/Fossilized_Shovel.webp" alt="Fossilized Shovel"></td>
+                            <td class="ocultar"><strong><em>Fossilized Shovel</em></strong><br><span>Una antigua pala de hueso que se ha fosilizado con el tiempo.</span></td>
+                            <td style="color: #FFD700;"><strong>$1 Billón</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 40 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 1 </span><br>
+                                <span><strong>Dureza:</strong> 6 </span><br>
+                            </td>
+                            <td><span style="color: #E71D05;">Ancient Ruins</span></td>
+                        </tr>
+                        <tr>
+                            <td><img class="img2" src="../img/Icebreaker.webp" alt="Icebreaker"></td>
+                            <td class="ocultar"><strong><em>Icebreaker
+                            </em></strong><br><span>Una pala congelada que puede aplastar depósitos congelados.</span></td>
+                            <td style="color: #FFD700;"><strong>$10 Billones</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 60 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 1.1 </span><br>
+                                <span><strong>Dureza:</strong> 6 </span><br>
+                            </td>
+                            <td><span style="color: #5D37F6;">Frozen Peak</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="toggle-header2" onclick="toggleTabList2()">
+                <h2><span id="arrow2" class="arrow2">▲</span> Pans por tiempo limitado</h2>
+            </div>
+            <div id="tabList2" class="table-container">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Apariencia</th>
+                            <th class="ocultar">Nombre/Descripción</th>
+                            <th>Precio</th>
+                            <th class="ocultar1">Estadísticas</th>
+                            <th>Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img class="img2" src="../img/Galactic_Shovel.png" alt="Galactic Shovel"></td>
+                            <td class="ocultar"><strong><em>Galactic Shovel</em></strong><br><span>Una pala formada a partir de las estrellas. Tiene la posibilidad de otorgar "Voidtorn" a los objetos encontrados.</span></td>
+                            <td style="color: #FFD700;"><strong>$2 Billones</strong></td>
+                            <td class="ocultar1">
+                                <span><strong>Fuerza de excavación:</strong> 60 </span><br>
+                                <span><strong>Velocidad de excavación:</strong> 0.8 </span><br>
+                                <span><strong>Dureza:</strong> 6 </span><br>
+                            </td>
+                            <td><span style="color: #060606;">The Void</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+
+    <footer>
+        <p>© 2025 Wiki Prospecting Roblox. Página hecha por fans. No afiliado con Roblox Corporation.</p>
+    </footer>
+</body>
+</html>

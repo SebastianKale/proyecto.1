@@ -1,0 +1,550 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(../img/meteorshower.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.row{
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  padding: 10px 20px;
+  font-weight: bold;
+  top: 0;
+  z-index: 999;
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.459);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.dropdown-item {
+  color: #ffffff;
+  padding: 10px 16px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccadfd94;
+  text-decoration: none;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-toggler {
+  color: white !important;
+}
+
+.navbar-brand{
+  margin-left: 20px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler{
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+  width: 50px;
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 1.5s ease;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+  content: url(../img/homecito.png);
+}
+
+.main-content{
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container{
+  width: 100%;
+  max-width: 1000px;
+  margin: 70px auto;
+  padding: 40px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
+  text-align: center;
+  background: transparent;
+  backdrop-filter: (10px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.wrapper h1{
+  font-size: 50px;
+  text-align: center;
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-wrap: break-word;
+}
+
+.wrapper p{
+  font-size: 20px;
+  text-align: center;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icon{
+  height:  200px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 428px) {
+  .wrapper h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 428px) {
+  .wrapper p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 428px) {
+  .icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 20px;
+  margin: 15px auto;
+  text-align: center;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 16px;
+  color: whitesmoke;
+    
+}
+
+.menu-container h2 {
+  font-family: "Bungee", sans-serif;
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 30px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.08);
+}
+
+.menu-item img {
+  width: 120px;
+  height: 120px;
+  max-width: 1000%;
+  margin: -20px;
+}
+
+.menu-item span {
+  margin-top: 30px;
+  font-size: 14px;
+  color: rgb(206, 201, 201)
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.guide-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.guide-container h3 {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #cfdfff;
+}
+
+.guide-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  color: white;
+}
+
+.column {
+  flex: 1 1 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.column a {
+  color: #4cb4ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Página 1 - Pans Página 2 - Shovels y Página 4 - Sluices*/
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.content-box {
+  background-color: rgba(44, 44, 66, 0.384);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+  color: white;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  color: whitesmoke;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.text-content{
+  color:rgba(255, 255, 255, 0.788)
+}
+
+a {
+  color: #5dbbff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(44, 44, 66, 0.562);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+  backdrop-filter: blur(2px);
+  color: white;
+}
+
+.content-table th, .content-table td {
+  border: 1px solid #000000;
+  padding: 10px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.content-table th {
+  background-color: #4f275ab9;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.content-table tr:nth-child(even) {
+  background-color: rgba(50, 50, 50, 0);
+}
+
+/* Pans img */
+
+.content-table td img{
+  height: 100px;
+  width: 100px;
+  max-width: 100%;
+}
+
+/* Shovels img */
+
+.content-table td .img2{
+  height: 120px;
+  width: 100px;
+  max-width: 100%;
+}
+
+/* Sluices img */
+
+.content-table td .img3{
+  height: 50px;
+  width: 120px;
+  max-width: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 725px) {
+  .ocultar1 {
+    display: none;
+  }
+  th.ocultar1 {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .ocultar {
+    display: none;
+  }
+  th.ocultar {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .ocultar2 {
+    display: none;
+  }
+  th.ocultar2 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  td, th {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+/* CSS + SCRIPT */
+
+.toggle-header {
+  cursor: pointer;
+  gap: 10px;
+  user-select: none;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size:0.8em;
+}
+
+.collapsed .arrow {
+  transform: rotate(-180deg);
+}
+
+/* -------- */
+
+.toggle-header2 {
+  cursor: pointer;
+  gap: 10px;
+  user-select: none;
+}
+
+.arrow2 {
+  transition: transform 0.3s ease;
+  font-size:0.8em;
+}
+
+.collapsed .arrow2 {
+  transform: rotate(-180deg);
+}
+
+/* Página 3 - Minerals y Página 5 - Equipment*/
+
+.modificador {
+  margin-bottom: -5px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.tabla-modificadores-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-modificadores {
+  width: 35%;
+  border-collapse: collapse;
+  color: whitesmoke;
+  font-family: sans-serif;
+  margin-bottom: 15px;
+  background-color: #3a2c5259;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+  backdrop-filter: blur(5px);
+}
+
+.tabla-modificadores th,
+.tabla-modificadores td {
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.tabla-modificadores th {
+  background-color: #2e2b60;
+}
+
+/* CSS + SCRIPT */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 15px;
+  background-color: #2d1d5a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab:hover,
+.tab.active {
+  background-color: #4b2fa3;
+}
+
+.tab-content {
+  display: none;
+  margin-left: -5px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #3a2c5259;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+  backdrop-filter: blur(5px);
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-size: 15px;
+  background-color: #2e2b60;
+  text-align: center;
+}
+
+i {
+  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  color: #7dbce986;
+}
+
+.img-mineral {
+  max-width: 100%;
+  height: 100px;
+  width: 150px;
+}
+
+.img-mineral2 {
+  max-width: 100%;
+  height: 120px;
+  width: 120px;
+  margin-right: -50px;
+}
+
+@media (max-width: 500px) {
+  .tab {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
