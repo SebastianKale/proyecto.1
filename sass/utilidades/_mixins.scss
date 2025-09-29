@@ -1,0 +1,56 @@
+
+@import "variables";
+
+@mixin respond($break) {
+  @media (max-width: $break) {
+    @content;
+  }
+}
+
+@mixin glass-effect($blur: 10px) {
+  background-color: transparent;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 2px solid $color-light-border;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: $radius;
+}
+
+@mixin background-image($url) {
+  background: {
+    image: url($url);
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+    attachment: fixed;
+  }
+}
+
+%container-base {
+  @include glass-effect(10px);
+  margin: 0 auto;
+  padding: 40px;
+  color: $color-text;
+}
+
+@mixin box-style($bg: $primary-bg) {
+  background-color: $bg;
+  box-shadow: $shadow;
+  border-radius: 12px;
+}
+
+@mixin table-style {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $color-table-bg;
+  box-shadow: $shadow;
+  backdrop-filter: blur(5px);
+}
+
+@mixin responsive-hide($class, $width) {
+  @media (max-width: $width) {
+    .#{$class}, th.#{$class} {
+      display: none;
+    }
+  }
+}

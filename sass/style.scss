@@ -1,0 +1,478 @@
+
+@import "utilidades/variables";
+@import "utilidades/mixins";
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include background-image("../img/meteorshower.gif");
+}
+
+.row{
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: $blur;
+    -webkit-backdrop-filter: $blur;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.459);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+
+    .dropdown-item {
+        color: $color-white;
+        padding: 10px 16px;
+
+        &:hover {
+            background-color: $color-hover;
+            color: #ccadfd94;
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar-custom {
+    .nav-link, 
+    .navbar-brand, 
+    .navbar-toggler {
+        color: $color-white !important;
+    }
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}
+
+.logo {
+    width: 50px;
+    max-width: 100%;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: all 1.5s ease;
+
+    &:hover {
+        transform: rotate(360deg);
+        content: url(../img/homecito.png);
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    @extend %container-base;
+    max-width: 1000px;
+    margin: 70px auto;
+}
+
+.wrapper {
+    @extend %container-base;
+    max-width: 1000px;
+    padding: 30px;
+    text-align: center;
+    
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        font-family: $font-title;
+        font-weight: 400;
+        font-style: normal;
+        overflow-wrap: break-word;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+        font-family: $font-script;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.icon {
+    height:  200px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+@include respond(428px) {
+    .wrapper {
+        h1 {
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+    }
+
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.menu-container {
+    @extend %container-base;
+    max-width: 100%;
+    padding-top: 20px;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 16px;
+
+    h2 {
+        font-family: $font-title;
+        text-align: center;
+        font-size: 28px;
+        padding-bottom: 40px;
+    }
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px 30px;
+
+    @include respond(800px) {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    @include respond(650px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    transition: transform $transition;
+
+    &:hover {
+        transform: scale(1.08);
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+        max-width: 1000%;
+        margin: -20px;
+    }
+
+    span {
+        margin-top: 30px;
+        font-size: 14px;
+        color: rgb(206, 201, 201)
+    }
+}
+
+.guide-container {
+    @extend %container-base;
+    padding: 20px;
+    text-align: center;
+    
+    h3 {
+        text-align: left;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #cfdfff;
+    }
+}
+
+.guide-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    color: $color-white;
+}
+
+.column {
+    flex: 1 1 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    border-radius: $radius;
+    text-align: left;
+
+    a {
+        color: #4cb4ff;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+footer {
+    color: $color-white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Página 1 - Pans Página 2 - Shovels y Página 4 - Sluices*/
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.content-box {
+    @include box-style();
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    color: $color-white;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+    color: $color-text;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.text-content{
+    color:rgba(255, 255, 255, 0.788)
+}
+
+a {
+    color: $color-accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.content-table {
+    @include table-style;
+    margin: 20px 0;
+    color: $color-white;
+
+    th, 
+    td {
+        border: 1px solid #000000;
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4f275ab9;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(50, 50, 50, 0);
+    }
+
+    td {
+        img{
+            height: 100px;
+            width: 100px;
+            max-width: 100%;
+
+            &.img2{
+                height: 120px;
+                width: 100px;
+                max-width: 100%;
+            }
+
+            &.img3{
+                height: 50px;
+                width: 120px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/* Media Queries */
+
+@include responsive-hide('ocultar1', 725px);
+@include responsive-hide('ocultar', 650px);
+@include responsive-hide('ocultar2', 390px);
+
+@media (max-width: 600px) {
+    td, 
+    th {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+/* CSS + SCRIPT */
+
+.toggle-header,
+.toggle-header2 {
+    cursor: pointer;
+    gap: 10px;
+    user-select: none;
+}
+
+.arrow,
+.arrow2 {
+    transition: transform 0.3s ease;
+    font-size:0.8em;
+}
+
+.collapsed {
+    .arrow,
+    .arrow2 {
+        transform: rotate(-180deg);
+    }
+}
+
+/* Página 3 - Minerals y Página 5 - Equipment*/
+
+.modificador {
+    margin-bottom: -5px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.tabla-modificadores-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-modificadores {
+    width: 35%;
+    color: $color-text;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    background-color: #3a2c5259;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+    backdrop-filter: blur(5px);
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    th {
+        background-color: #2e2b60;
+    }
+}
+
+/* CSS + SCRIPT */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .tab {
+        padding: 10px 15px;
+        background-color: #2d1d5a;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+            background-color: #4b2fa3;
+        }
+    }
+}
+
+.tab-content {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    position: absolute;
+    margin-left: -5px;
+
+    &.active {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+        position: relative;
+    }
+}
+
+table {
+    @include table-style;
+    margin-top: 15px;
+
+    th, 
+    td {
+        border: 1px solid #555;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        font-size: 15px;
+        background-color: #2e2b60;
+        text-align: center;
+    }
+}
+
+i {
+    font-size: 25px;
+    font-family: $font-body;
+    font-style: normal;
+    color: #7dbce986;
+}
+
+.img-mineral {
+    max-width: 100%;
+    height: 100px;
+    width: 150px;
+}
+
+.img-mineral2 {
+    max-width: 100%;
+    height: 120px;
+    width: 120px;
+    margin-right: -50px;
+}
+
+@media (max-width: 500px) {
+    .tab {
+        font-size: 12px;
+        padding: 8px 10px;
+  }
+}
