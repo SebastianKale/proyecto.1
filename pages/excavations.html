@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <title>WikiBlox! - Excavations</title>
+</head>
+<body>
+    <header class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img class="logo" src="../img/prospecting.webp" alt="imagen de logo">
+                    </a>
+                    <a class="navbar-brand" href="../index.html">WikiBlox!</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navegar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/pans.html">Pans</a></li>
+                                    <li><a class="dropdown-item" href="../pages/shovels.html">Shovels</a></li>
+                                    <li><a class="dropdown-item" href="../pages/minerals.html">Minerals</a></li>
+                                    <li><a class="dropdown-item" href="../pages/sluices.html">Sluices</a></li>
+                                    <li><a class="dropdown-item" href="../pages/equipment.html">Equipment</a></li>
+                                    <li><a class="dropdown-item" href="../pages/enchanting.html">Enchanting</a></li>
+                                    <li><a class="dropdown-item" href="../pages/museum.html">Museum</a></li>
+                                    <li><a class="dropdown-item" href="../pages/excavations.html">Excavating</a></li>
+                                    <li><a class="dropdown-item" href="../pages/geodes.html">Geodes</a></li>
+                                    <li><a class="dropdown-item" href="../pages/runes.html">Runes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-box">
+            <h1>Excavaciones</h1>
+            <p class="subtitle">From Nikkis</p>
+            <p class="text-content"><strong>Las excavaciones</strong> son actividades que otorgan recompensas tras un tiempo determinado. Mejoran cuanto más se realizan. Para desbloquear un sitio de excavación, debes pagar la tarifa del permiso.</p>
+            <ul>
+                <li>Se pueden encontrar sitios de excavación en Caldera Island y Snowy Mountain.</li>
+                <li>El nivel máximo para las excavaciones es el nivel 10.</li>
+            </ul>
+            <div>
+                <h2>Sitios de excavación</h2>
+            </div>
+            <div id="tabList">
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('caldera')">Isla Caldera</div>
+                    <div class="tab" onclick="showTab('snowy')">Montaña Nevada</div>
+                </div>
+                <div id="caldera" class="tab-content active">
+                    <div class="box-class">
+                        <p>Hay dos sitios de excavación en la isla Caldera.</p>
+                        <h3>Ruinas volcánicas (Sitio A)</h3>
+                        <ul>
+                            <li>Costo del permiso: <span style="color: rgb(241, 241, 170);">$50,000,000</span></li>
+                            <li>Costo de excavación: <span style="color: rgb(241, 241, 170);">$10,000,000</span></li>
+                            <li>Duración (base): 10h</li>
+                        </ul>
+                        <h3>Templo de Magma (Sitio B)</h3>
+                        <ul>
+                            <li>Costo del permiso: <span style="color: rgb(241, 241, 170);">$2,000,000,000</span></li>
+                            <li>Costo de excavación: <span style="color: rgb(241, 241, 170);">$50,000,000</span></li>
+                            <li>Duración (base): 16h</li>
+                        </ul>
+                    </div>
+                </div>
+                    <div id="snowy" class="tab-content">
+                        <div class="box-class">
+                        <p>Hay dos sitios de excavación en la Montaña nevada.</p>
+                        <h3>Fortaleza Congelada (Sitio C)</h3>
+                        <ul>
+                            <li>Costo del permiso: <span style="color: rgb(241, 241, 170);">$10,000,000,000</span></li>
+                            <li>Costo de excavación: <span style="color: rgb(241, 241, 170);">$500,000,000</span></li>
+                            <li>Duración (base): 22h</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 Wiki Prospecting Roblox. Página hecha por fans. No afiliado con Roblox Corporation.</p>
+    </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+
+</body>
+</html>

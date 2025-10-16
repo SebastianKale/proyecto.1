@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <title>WikiBlox! - Enchanting</title>
+</head>
+<body>
+    <header class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img class="logo" src="../img/prospecting.webp" alt="imagen de logo">
+                    </a>
+                    <a class="navbar-brand" href="../index.html">WikiBlox!</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Navegar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/pans.html">Pans</a></li>
+                                    <li><a class="dropdown-item" href="../pages/shovels.html">Shovels</a></li>
+                                    <li><a class="dropdown-item" href="../pages/minerals.html">Minerals</a></li>
+                                    <li><a class="dropdown-item" href="../pages/sluices.html">Sluices</a></li>
+                                    <li><a class="dropdown-item" href="../pages/equipment.html">Equipment</a></li>
+                                    <li><a class="dropdown-item" href="../pages/enchanting.html">Enchanting</a></li>
+                                    <li><a class="dropdown-item" href="../pages/museum.html">Museum</a></li>
+                                    <li><a class="dropdown-item" href="../pages/excavations.html">Excavations</a></li>
+                                    <li><a class="dropdown-item" href="../pages/geodes.html">Geodes</a></li>
+                                    <li><a class="dropdown-item" href="../pages/runes.html">Runes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="content-box">
+            <h1>Enchanting</h1>
+            <p class="subtitle">From Nikkis</p>
+            <p class="text-content"><strong>Los encantamientos solo</strong> se aplican a la <a href="../pages/pans.html">sárten</a> y a la <a href="../pages/shovels.html">pala</a> que tengas equipadas. Máximo <strong>1</strong> encantamiento por sárten/pala (puedes reencantarlos cuando quieras).</p>
+
+            <div>
+                <h2>Encantamientos disponibles</h2>
+            </div>
+            <div id="tabList">
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('sarten')">Sárten</div>
+                    <div class="tab" onclick="showTab('pala')">Pala</div>
+                </div>
+                <div id="sarten" class="tab-content active">
+                    <div class="box-class">
+                        <h2>Cómo encantar</h2>
+                        <ul>
+                            <li>Dirígete al Altar Misterioso ubicado detrás de la Tienda del Alquimista en Fortune River.</li>
+                            <li>Sostenga una <a href="../pages/minerals.html">aurorita</a> o una <a href="../pages/minerals.html">aetherita</a> y luego interactúe con el altar.</li>
+                        </ul>
+                        <p><em>Notas</em></p>
+                        <ul>
+                            <li>Aetherite <strong>no roba</strong> encantamientos con probabilidades base <strong>> 5% ( Fuerte , Veloz , Enérgico , Afortunado )</strong>.</li>
+                            <li>Algunos encantamientos son <strong>exclusivos</strong> del <a href="">Comerciante ambulante</a> o de las tiradas de Aetherite.</li>
+                            <li>El peso del mineral no afecta la rareza del encantamiento que puedas obtener.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="enchanting">
+                        <h3>Encantamientos de sárten disponibles</h3>
+                    </div>
+                    <div id="tabList" class="table-container">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Encantar
+                                    </th>
+                                    <th>Efectos</th>
+                                    <th class="ocultar">Aurorita Chance</th>
+                                    <th class="ocultar1">Aetherita Chance</th>
+                                    <th>Fuente / Notas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th style="color: orange;">Fuerte</th>
+                                    <th>+20 <p style="color: rgb(241, 241, 170);">Capacidad</p></th>
+                                    <th class="ocultar">20%</th>
+                                    <th class="ocultar1"><em>(excluido por Aetherite)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: red;">Enérgico</th>
+                                    <th>+2 <p style="color: rgb(235, 190, 107);">Fuerza de agitación</p></th>
+                                    <th class="ocultar">20%</th>
+                                    <th class="ocultar1"><em>(excluido por Aetherite)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: aqua;">Veloz</th>
+                                    <th>+10% <p style="color: rgb(255, 255, 255);">Velocidad de agitación</p></th>
+                                    <th class="ocultar">20%</th>
+                                    <th class="ocultar1"><em>(excluido por Aetherite)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgb(3, 184, 3);">Afortunado</th>
+                                    <th>+5 <p style="color: rgb(39, 139, 39);">Suerte</p></th>
+                                    <th class="ocultar">10%</th>
+                                    <th class="ocultar1"><em>(excluido por Aetherite)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: orange;">Gigantesco</th>
+                                    <th>+40 <p style="color: rgb(241, 241, 170);">Capacidad</p></th>
+                                    <th class="ocultar">5%</th>
+                                    <th class="ocultar1"><em>Elegible (tasa desconocida)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgb(236, 236, 77);">Bendecido</th>
+                                    <th>+25 <p style="color: rgb(241, 241, 170);">Capacidad</p>; +10 <p style="color: rgb(39, 139, 39);">Suerte</p></th>
+                                    <th class="ocultar">1%</th>
+                                    <th class="ocultar1"><em>Elegible (raro)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgb(236, 236, 77);">brillante</th>
+                                    <th>+25% <p style="color: white;">Velocidad de agitación</p></th>
+                                    <th class="ocultar">5%</th>
+                                    <th class="ocultar1"><em>Elegible (tasa desconocida)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: red;">Destructivo</th>
+                                    <th>+5 <p style="color: rgb(235, 190, 107);">Fuerza de agitación</p></th>
+                                    <th class="ocultar">5%</th>
+                                    <th class="ocultar1"><em>Elegible (tasa desconocida)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: blue;">Titánico</th>
+                                    <th>+30 <p style="color: rgb(241, 241, 170);">Capacidad</p>; +20% <p style="color: rgb(243, 95, 95);">Aumento de tamaño</p></th>
+                                    <th class="ocultar">1%</th>
+                                    <th class="ocultar1"><em>Elegible (muy raro)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: yellow;">Ávaro</th>
+                                    <th>+20% de<p style="color: yellow;">Aumento de ventas</p></th>
+                                    <th class="ocultar">5%</th>
+                                    <th class="ocultar1"><em>Elegible (tasa desconocida)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: yellow;">Midas</th>
+                                    <th>+50% de<p style="color: yellow;">Aumento de ventas</p></th>
+                                    <th class="ocultar">1%</th>
+                                    <th class="ocultar1"><em>Elegible (muy raro)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: red;">Impulsando</th>
+                                    <th>+10% de<p style="color: rgb(243, 95, 95);">Aumento de tamaño</p></th>
+                                    <th class="ocultar">5%</th>
+                                    <th class="ocultar1"><em>Elegible (tasa desconocida)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: purple;">Inestable</th>
+                                    <th>+25% de<p style="color: rgb(43, 180, 43);">Aumento de modificador</p></th>
+                                    <th class="ocultar">2%</th>
+                                    <th class="ocultar1"><em>Elegible (raro)</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgba(255, 255, 0, 0.712);">Divino</th>
+                                    <th>+40 <p style="color: rgb(241, 241, 170);">Capacidad</p>; +20 <p style="color: rgb(39, 139, 39);">Suerte</p></th>
+                                    <th class="ocultar">-</th>
+                                    <th class="ocultar1"><em>0,1%</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgba(151, 22, 151, 0.671);">Cósmico</th>
+                                    <th>+50 <p style="color: rgb(241, 241, 170);">Capacidad</p>; 3 <p style="color: rgb(235, 190, 107);">Fuerza de agitación</p>; +25% <p style="color: rgb(243, 95, 95);">Aumento de tamaño</p></th>
+                                    <th class="ocultar">-</th>
+                                    <th class="ocultar1"><em>0,1%</em></th>
+                                    <th>-</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: pink;">Prismático</th>
+                                    <th>+20 <p style="color: rgb(241, 241, 170);">Capacidad</p>; +2 <p style="color: rgb(235, 190, 107);">Fuerza de sacudida</p>; +10% <p style="color: rgb(243, 95, 95);">Aumento de tamaño</p>; +10 <p style="color: rgb(39, 139, 39);">Suerte</p>; +10% <p style="color: white;">Velocidad de sacudida</p>; +10% <p style="color: rgb(43, 180, 43);">Aumento de modificador</p></th>
+                                    <th class="ocultar">-</th>
+                                    <th class="ocultar1"><em>-</em></th>
+                                    <th>Exclusivo de <a href="">Comerciante Viajero</a></th>
+                                </tr>
+                                <tr>
+                                    <th style="color: orangered;">Infernal</th>
+                                    <th>+80 <p style="color: rgb(39, 139, 39);">Suerte</p>; -20 <p style="color: rgb(241, 241, 170);">Capacidad</p>; -10% <p style="color: rgb(243, 95, 95);">Aumento de tamaño</p></th>
+                                    <th class="ocultar">-</th>
+                                    <th class="ocultar1"><em>-</em></th>
+                                    <th>Exclusivo de <a href="">Comerciante Viajero</a></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="pala" class="tab-content">
+                    <div class="box-class">
+                        <h2>Cómo encantar</h2>
+                        <ul>
+                            <li>Dirígete al Altar Misterioso ubicado en el Oasis de Azuralita en las Cavernas de Cristal.</li>
+                            <li>Sostén una Aetherita desgarrada por el vacío , electrificada o iridiscente y luego interactúa con el altar.</li>
+                        </ul>
+                        <p><em>Notas</em></p>
+                        <ul>
+                            <li>Es necesario completar la misión La Semilla de la Luz para desbloquear ciertos encantamientos más raros.</li>
+                        </ul>
+                    </div>
+
+                    <div class="enchanting">
+                        <h3>Encantamientos de pala disponibles</h3>
+                    </div>
+                    <div id="tabList" class="table-container">
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Encantar</th>
+                                    <th>Efectos</th>
+                                    <th class="ocultar">Oportunidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th style="color: rgb(153, 59, 153);">Vacío tocado</th>
+                                    <th>1% de probabilidad de que los minerales queden <p style="color: rebeccapurple;">destruidos por el vacío</p> una vez extraídos.</th>
+                                    <th class="ocultar">3%</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: orangered;">Mítico</th>
+                                    <th>10% de probabilidad de obtener un recurso <p style="color: rgb(241, 26, 98);">mítico</p> o <p style="color: rgb(153, 4, 4);">exótico</p> duplicado al encontrarlo.</th>
+                                    <th class="ocultar">6%</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgb(3, 184, 3);">Rítmico</th>
+                                    <th>Con cada racha de excavación perfecta, aumenta la <p style="color: rgb(3, 184, 3);">suerte</p> de 0,2x hasta 1,3x.</th>
+                                    <th class="ocultar">6%</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgb(241, 241, 170);">No euclidiano</th>
+                                    <th>Con cada racha de excavación perfecta, aumenta la <p style="color: rgb(241, 241, 170);">capacidad</p> de 0,1x hasta 2x.</th>
+                                    <th class="ocultar">12%</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: rgb(80, 76, 76);">Excavando</th>
+                                    <th>25% para obtener 2-4 minerales adicionales cuando son <p style="color: gray;">comunes</p> a <p style="color: rgb(41, 41, 238);">raros</p></th>
+                                    <th class="ocultar">24%</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: orange;">Geotérmica</th>
+                                    <th>2% de probabilidad base de obtener una geoda al excavar. (mayor velocidad de excavación = menor probabilidad)</th>
+                                    <th class="ocultar">24%</th>
+                                </tr>
+                                <tr>
+                                    <th style="color: greenyellow;">Bien equilibrado</th>
+                                    <th>Aumente el umbral de excavación perfecto en 3x.</th>
+                                    <th class="ocultar">24%</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Wiki Prospecting Roblox. Página hecha por fans. No afiliado con Roblox Corporation.</p>
+    </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+
+</body>
+</html>
